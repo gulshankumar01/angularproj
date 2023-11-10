@@ -25,9 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+              
             ],
-            "scripts": []
+            "scripts": ["./node_modules/jquery/dist/jquery.js",
+            "./node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           },
           "configurations": {
             "production": {
@@ -88,11 +92,15 @@
             ],
             "styles": [
               "src/styles.css"
+             
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4c731e47-969d-4828-ad96-e543f2eed66c"
   }
 }

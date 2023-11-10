@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-success mt-1 ">
+    <div class="container-fluid " class="container-fluid d-flex justify-content-center">
+        <i class="fa fa-bank mx-4  "></i>
+        <a class="navbar-brand" routerLink="/contacts/adminhome">
+            <i class="fa fa-user"></i>
+            Admin &nbsp;Home</a>
+      </div>
+  </nav>
+  <h1 class="text-center">View Account Request</h1>
+  <div class="container mt-5 text-center">
+    <div class="row">
+      <div class="col" *ngFor="let contact of Regdata">
+        <div class="card shadow" style="width: 15rem">
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <img
+                [src]="" 
+                class="card-img-top"
+                alt="User Image"
+                style="max-width: 100%"
+              />
+            </div>
+           
+            <p class="card-text">First Name: {{ contact.firstname }}</p>
+            <p class="card-text">Last Name: {{ contact.lastname }}</p>
+            <p class="card-text">Email: {{ contact.email }}</p>
+            <p class="card-text">User Name: {{ contact.username }}</p>
+            <p class="card-text">Password: {{ contact.password }}</p>
+            <p class="card-text">Address: {{ contact.address }}</p> <!-- Correct the property name here -->
+            <p class="card-text">Phone: {{ contact.phone }}</p>
+          </div>
+          <div class="row mt-3">
+            <div class="col text-center">
+              <a class="btn btn-danger" routerLink="/contacts/adminapproveregister/{{contact.registerId}}">
+                <i class="fa fa-arrow-alt-circle-left"></i> Create Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+  
+  
